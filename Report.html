@@ -1,0 +1,31 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <strong> Report </strong>
+        <div>
+            Η εφαρμογή του μετατροπέα συναλλάγματος αποτελείται από τα  αρχεία index.jsp, Report.html, error.html, Converter.java, Code.java, MyServletContextListener.java, Dog.java και Report5.java.<br>
+Το αρχείο index.jsp εμφανίζει στο χρήστη την βασική φόρμα όπου επιλέγει το συνάλλαγμα από και προς το οποίο θέλει να μετατρέψει κάποιο ποσό.  Η μετατροπή γίνεται στο servlet Converter.java. Η εφαρμογή λαμβάνει δυναμικά τις ισοτιμίες από το ακόλουθο xml αρχείο : http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml όπου το parsing του xml αρχείου γίνεται μέσω της βιβλιοθήκης jdom. Βασική πηγή για τη χρήση της βιβλιοθήκης αυτής ήταν  οι σελίδες http://www.cs.unc.edu/Courses/jbs/lessons/ws/ws_jdom/ και
+http://www.roseindia.net/jsp/jdo-mparsing-xml.shtml
+Το αρχείο με τις ισοτιμίες περάστηκε στο servlet Converter.java μέσω παραμέτρων αρχικοποίησης στο xml αρχείο της εφαρμογής. Ταυτόχρονα, το servlet Converter.java επιστρέφει στην αρχική φόρμα που συμπληρώνει ο χρήστης το αντίστοιχο αποτέλεσμα,  ενώ σε περίπτωση που ο χρήστης δώσει γράμματα προς μετατροπή αντί για αριθμό, εμφανίζεται μια νέα σελίδα με το μήνυμα « You gave wrong input!!! Please enter a number!!!!» και εμφανίζει  πάλι την αρχική φόρμα στο χρήστη ώστε να επαναλάβει τη διαδικασία με σωστή είσοδο.<br> 
+Στην αρχική φόρμα εμφανίζονται άλλα δύο κουμπιά Info και Code.  To Info δίνει στο χρήστη τη δυνατότητα να διαβάσει την αναφορά της εργασίας.  Υπεύθυνο είναι το Report5.java  το οποίο με τη χρήση Listeners κάνει redirect στην Report.html η οποία περιέχει την αναφορά. 
+Ο Listener υλοποιείται στα αρχεία MyServletContextListener.java,  Dog.java, Report5.java. 
+Για την υλοποιίηση του Listener βασική πηγή ήταν το αντίστοιχο κεφάλαιο του βιβλίου.<br>
+To κουμπί Code παρέχει στον χρήστη τον κώδικα της εφαρμογής και υπέυθυνο είναι το αρχείο Code.java.<br>
+Κατά την υλοποίηση της εφαρμογής προέκυψαν διάφορα προβλήματα και δυσκολίες όπως η χρήση της jdom και το redirecting με τη χρήση listeners.Γι΄αυτό και απαιτήθηκε περισσότερος χρόνος από τον αναμενόμενο.<br>
+Τέλος, σημαντική ήταν η βοήθεια των συμφοιτητών μου Αριστείδη Λιάνα και Παρασκευής Μικρομάστορα, αλλά και των βοηθών του μαθήματος.<br>
+
+***Η εφαρμογή είναι διαθέσιμη και στην διεύθυνση: https://github.com/almarnar/CurrencyConverter
+
+
+
+</div>
+    </body>
+</html>
